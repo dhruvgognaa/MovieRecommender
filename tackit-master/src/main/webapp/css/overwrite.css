@@ -1,0 +1,129 @@
+body{
+	font-family: Palatino Linotype;
+	font-style: italic;
+	background: url(../images/light2.jpg);
+	background-repeat:no-repeat; 	
+	background-size: 100%;
+}
+
+.font-size-50{
+	font-size: 50px;
+}
+
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], 
+input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], 
+input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], 
+.uneditable-input{
+	height: 20px;
+}
+
+.banner-style{
+	color: white; 
+	margin: 0px 10px 0px 10px;
+	height: inherit;
+	font-family: palatino linotype;
+}
+
+.innerDivStyling{
+	background-color: lightblue; 
+	height:180px; 
+	-webkit-box-shadow: 3px 0px 5px #2F4F4F; 
+	-moz-box-shadow: 3px 0px 5px #888888; 
+	box-shadow: 3px 0px 5px #888888; padding: 30px;
+}
+
+.margin-top-80{
+	margin-top: 80px;
+}
+
+.outerdiv{
+	text-align: center;
+}
+
+.innerdiv{
+	display: inline-block;
+	color: strong black;
+}
+
+.align-left{
+	text-align: left;
+}
+
+.padding-right-15{
+	padding-right: 15px;
+}
+
+.outerdiv-nopadding{
+	padding-top: 0px;
+}
+
+.clearboth{
+	clear: both;
+}
+
+div>.displayinline{
+	display: inline-block;
+}
+
+.tableborder table{
+	border: 2px solid black;
+	border-collapse: collapse;
+	border-radius:25px;
+}
+
+.tableborder th, .tableborder td{
+	border: 2px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+.even{
+	background: lightgrey;
+}
+
+.odd{
+	background: whitesmoke;
+}
+
+#fade {
+    display: none;
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #ababab;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .70;
+    filter: alpha(opacity=80);
+}
+
+#modal {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 45%;
+    border: 3px solid #ababab;
+    box-shadow:1px 1px 10px #ababab;
+    border-radius:20px;
+    background-color: white;
+    z-index: 1002;
+    text-align:center;
+    overflow: auto;
+}
+
+#headerNav .float-right{
+	float: right;
+}
+
+#errorOutput{
+	font-size: 20px;
+	color: #FF3300;
+	font-weight: bold;
+	margin: 5px 0px;
+}
+
+#headerNav .padding-top-15{
+	padding-top: 15px;
+}

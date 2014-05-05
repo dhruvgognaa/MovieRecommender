@@ -1,0 +1,54 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen" type="text/css">
+<link href="bootstrap/bootstrap.css" rel="stylesheet" media="screen" type="text/css">
+<link href="bootstrap/bootstrap-responsive.css" rel="stylesheet" media="screen" type="text/css">
+<link href="bootstrap/bootstrap-responsive.min.css" rel="stylesheet" media="screen" type="text/css">
+<link href="css/overwrite.css" rel="stylesheet" media="screen" type="text/css">
+
+<script	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="jsbootstrap/bootstrap.js" /></script>
+<script type="text/javascript" src="jsbootstrap/bootstrap.min.js" /></script>
+<script type="text/javascript" src="jsbootstrap/bootstrap-dropdown.js" /></script>
+<script type="text/javascript" src="jsbootstrap/bootstrap-alert.js" /></script>
+<script type="text/javascript" src="jsbootstrap/bootstrap-button.js" /></script>
+<script type="text/javascript" src="jsbootstrap/bootstrap-carousel.js" /></script>
+<script type="text/javascript" src="jsbootstrap/bootstrap-scrollspy.js" /></script>
+<script type="text/javascript" src="jsbootstrap/bootstrap-modal.js" /></script>
+
+<div id="header">
+	<div class="navbar navbar-inverse navbar-static-top">
+		<div id="headerNav" class="navbar-inner">
+			<a class="brand" href="homepage.jsp"><span class="banner-style font-size-50 ">Movies For You</span></a>
+			<a class="brand padding-top-15" href="recallgraph.jsp" target="_blank"><span class="banner-style">Recall Graph</span></a>
+			<a class="brand padding-top-15" href="nnGraph.jsp" target="_blank"><span class="banner-style">NN Graph</span></a>
+			<a class="brand padding-top-15" href="graphView.jsp" target="_blank"><span class="banner-style">Graph View</span></a>
+			<% if(session.getAttribute("username") != null) { %>
+			<div class="float-right">
+				<span style="color: white;">Hello <%= session.getAttribute("username") %>&nbsp;&nbsp;&nbsp;&nbsp;</span><span><a href="<%=request.getContextPath()%>/LogoutServlet">Logout</a></span>
+			</div>
+			<% } else { %>
+			<ul id="loginMenu" class="nav" style=" float:right;">
+				<li><a class="padding-top-15" href="login.jsp" style="color: white;">Login</a></li>
+				<li><a class="padding-top-15" href="signup.jsp" style="color: white;">Sign Up</a></li>
+			</ul>
+			<% } %>
+		</div>
+	</div>
+</div>
+
+<script>
+function logout(){
+	$.ajax({
+		url : "movierecommender/LogoutServlet",
+	    type: "GET",
+	    data : "logout=1",
+	    success:function(data, textStatus, jqXHR){
+	    	console.log(data);
+	    	//window.location.href="homepage.jsp?user="+username;
+	    },
+	    error: function(jqXHR, textStatus, errorThrown){
+	    	alert('Could not process request.. ' + errorThrown);
+	    }
+	});
+}
+</script>
